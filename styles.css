@@ -63,6 +63,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 500px;
+  max-height: auto;
 }
 
 #wrapper h1 {
