@@ -47,28 +47,199 @@ h6 {
   isolation: isolate;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 /* css reset */
 
+:root {
+  --cream: #f4f0e5;
+  --text: #1d1a14;
+  --header-h: 60px;
+  --nav-w: 260px;
+}
+
+html {
+  scroll-padding-top: var(--header-h); /* anchors don't hide under the header */
+}
+
 body {
-  height: 100dvh;
-  background-color: #f4f0e5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 100dvh;
+  background-color: var(--cream);
+  color: var(--text);
 }
 
-#wrapper {
+/* ---------- Header (mobile first) ---------- */
+header {
+  position: sticky;
+  top: 0;
+  height: var(--header-h);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  max-width: 500px;
-  max-height: auto;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  background-color: var(--cream);
+  border-bottom: 1px solid rgba(29, 26, 20, 0.15);
+  z-index: 20;
 }
 
-#wrapper h1 {
-  font-size: 3rem;
-  color: #333333;
-  margin-bottom: 1rem;
+.brand {
+  font-size: 1.25rem;
+}
+
+/* hamburger button */
+.menu-toggle {
+  width: 44px; /* comfortable tap target */
+  height: 44px;
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text);
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Slide-in nav (mobile) ---------- */
+nav {
+  position: fixed;
+  top: var(--header-h);
+  bottom: 0;
+  left: 0;
+  width: min(var(--nav-w), 85vw);
+  padding: 1rem 0;
+  background-color: var(--cream);
+  border-right: 1px solid rgba(29, 26, 20, 0.15);
+  transform: translateX(-100%); /* retracted */
+  visibility: hidden; /* keeps hidden links out of tab order */
+  transition: transform 0.3s ease, visibility 0s 0.3s;
+  z-index: 15;
+  overflow-y: auto;
+}
+
+nav.open {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.3s ease, visibility 0s;
+}
+
+nav > ul {
+  padding: 0;
+}
+
+nav > ul > li {
+  list-style: none;
+  display: block;
+}
+
+nav > ul > li > a {
+  display: block;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.25rem;
+}
+
+nav > ul > li > a:hover,
+nav > ul > li > a:focus-visible {
+  background-color: rgba(29, 26, 20, 0.08);
+  text-decoration: none;
+}
+
+/* dim backdrop behind the open menu */
+.overlay {
+  position: fixed;
+  inset: var(--header-h) 0 0 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Larger screens: back to your centred horizontal nav ---------- */
+@media (min-width: 900px) {
+  .menu-toggle,
+  .brand,
+  .overlay {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+    padding: 0 2rem;
+  }
+
+  nav {
+    position: static;
+    width: auto;
+    padding: 0;
+    border: 0;
+    transform: none;
+    visibility: visible;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav > ul {
+    display: flex;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  nav > ul > li:last-child {
+    margin-right: 0;
+  }
+
+  nav > ul > li > a {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+
+  nav > ul > li > a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav,
+  .overlay,
+  .menu-toggle span {
+    transition: none;
+  }
+}
+
+article{
+  height: 100vh;
 }

@@ -39,7 +39,19 @@
   </head>
   <body>
     <header>
-      <nav>
+      <button
+        class="menu-toggle"
+        aria-label="Menu"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="#landing">Reddy For Walkies</a>
+
+      <nav id="site-nav" aria-label="Main">
         <ul>
           <li><a href="#landing">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -48,12 +60,16 @@
         </ul>
       </nav>
     </header>
+    <div class="overlay"></div>
+
     <main>
-      <article id="landing"></article>
-      <article id="about"></article>
-      <article id="services"></article>
-      <article id="contact"></article>
+      <article id="landing"><h2>Landing</h2></article>
+      <article id="about"><h2>About</h2></article>
+      <article id="services"><h2>Services</h2></article>
+      <article id="contact"><h2>Contact</h2></article>
     </main>
     <footer></footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
