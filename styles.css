@@ -59,6 +59,8 @@ a:hover {
 
 :root {
   --cream: #f4f0e5;
+  --secondary-colour: #e2c4a6;
+  --text-colour: #71574b;
   --text: #1d1a14;
   --header-h: 60px;
   --nav-w: 260px;
@@ -83,13 +85,17 @@ header {
   align-items: center;
   gap: 0.75rem;
   padding: 0 1rem;
-  background-color: var(--cream);
+  background-color: var(--secondary-colour);
   border-bottom: 1px solid rgba(29, 26, 20, 0.15);
+  box-shadow: 0 2px 4px rgba(29, 26, 20, 0.1);
   z-index: 20;
 }
 
 .brand {
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* hamburger button */
@@ -109,7 +115,9 @@ header {
   width: 24px;
   height: 2px;
   background-color: var(--text);
-  transition: transform 0.25s, opacity 0.25s;
+  transition:
+    transform 0.25s,
+    opacity 0.25s;
 }
 
 .menu-toggle[aria-expanded="true"] span:nth-child(1) {
@@ -130,11 +138,13 @@ nav {
   left: 0;
   width: min(var(--nav-w), 85vw);
   padding: 1rem 0;
-  background-color: var(--cream);
+  background-color: var(--secondary-colour);
   border-right: 1px solid rgba(29, 26, 20, 0.15);
   transform: translateX(-100%); /* retracted */
   visibility: hidden; /* keeps hidden links out of tab order */
-  transition: transform 0.3s ease, visibility 0s 0.3s;
+  transition:
+    transform 0.3s ease,
+    visibility 0s 0.3s;
   z-index: 15;
   overflow-y: auto;
 }
@@ -142,7 +152,9 @@ nav {
 nav.open {
   transform: translateX(0);
   visibility: visible;
-  transition: transform 0.3s ease, visibility 0s;
+  transition:
+    transform 0.3s ease,
+    visibility 0s;
 }
 
 nav > ul {
@@ -166,6 +178,21 @@ nav > ul > li > a:focus-visible {
   text-decoration: none;
 }
 
+/* contact us */
+nav > ul > li > a.contact {
+  background-color: var(--text);
+  color: var(--cream);
+  border-radius: 0.25rem;
+  text-align: center;
+  margin: 0.5rem 1rem;
+}
+
+nav > ul > li > a.contact:hover,
+nav > ul > li > a.contact:focus-visible {
+  background-color: var(--text-colour);
+  text-decoration: none;
+}
+
 /* dim backdrop behind the open menu */
 .overlay {
   position: fixed;
@@ -185,13 +212,12 @@ nav > ul > li > a:focus-visible {
 /* ---------- Larger screens: back to your centred horizontal nav ---------- */
 @media (min-width: 900px) {
   .menu-toggle,
-  .brand,
   .overlay {
     display: none;
   }
 
   header {
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 2rem;
   }
 
@@ -230,6 +256,10 @@ nav > ul > li > a:focus-visible {
     background: none;
     text-decoration: underline;
   }
+
+  nav > ul > li > a.contact {
+    margin: 0rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -240,6 +270,6 @@ nav > ul > li > a:focus-visible {
   }
 }
 
-article{
+article {
   height: 100vh;
 }
