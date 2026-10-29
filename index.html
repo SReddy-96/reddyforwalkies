@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Yeseva+One&display=swap"
       rel="stylesheet"
     />
     <!-- favicon -->
@@ -61,6 +61,7 @@
           <li><a href="#landing">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#ourWork">Our Work</a></li>
           <li><a href="#contact" class="contact">Contact Us</a></li>
         </ul>
       </nav>
@@ -68,9 +69,173 @@
     <div class="overlay"></div>
 
     <main>
-      <article id="landing"><h2>Landing</h2></article>
-      <article id="about"><h2>About</h2></article>
-      <article id="services"><h2>Services</h2></article>
+      <article id="landing">
+        <img
+          src="favicon_io/android-chrome-512x512.png"
+          alt="reddy for walkies logo"
+        />
+      </article>
+      <article id="about">
+        <section id="about-card">
+          <img src="images/about.png" alt="about reddy for walkies" />
+          <h2>Hi. I'm Emily</h2>
+          <p>Owner and Dog Walker</p>
+          <a href="#contact" class="button-primary">Contact Us</a>
+          <div class="about-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>facebook</title>
+              <path
+                d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>instagram</title>
+              <path
+                d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>whatsapp</title>
+              <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"
+              />
+            </svg>
+          </div>
+        </section>
+        <section id="about-text">
+          <h2>About Us</h2>
+          <p>
+            Hi, I’m Emily, the proud owner and professional dog walker behind
+            Reddy for Walkie. With a genuine love for dogs and a passion for
+            their well-being, I’ve created a dog walking service that
+            prioritises safety, trust, and happiness.
+          </p>
+          <br />
+          <p>
+            Whether it’s a lively group walk or a calm solo stroll, my goal is
+            to make every outing enriching, enjoyable, and perfectly suited to
+            your dog’s individual needs. I take the time to understand each
+            dog’s personality, energy level, and preferences—ensuring every walk
+            is a positive experience from start to finish.
+          </p>
+          <br />
+          <p>
+            At Reddy for Walkies, it’s more than just walking—it’s about
+            building lasting bonds, providing consistent care, and giving you
+            peace of mind knowing your dog is in safe and experienced hands.
+            Whether you’ve got a playful pup, a dog a little more triggered by
+            the world or a shy senior, they’ll always be treated with patience,
+            love, and respect.
+          </p>
+          <br />
+          <div class="about-buttons">
+            <a href="#ourWork" class="button-primary">Our Work</a>
+            <a href="#services" class="button-primary">View Services</a>
+          </div>
+        </section>
+      </article>
+      <article id="services">
+        <h2>Services</h2>
+        <div id="service-grid">
+          <section class="service-card">
+            <img src="images-solo-walk" alt="image of solo dog walk" />
+            <h3>Solo Walks</h3>
+            <br />
+            <p>
+              Our Solo walks are for any dog, a one-to-one walk tailored to your
+              dogs needs. Some dogs prefer their own space and like to go on a
+              walks perfected for them. Ideal for more nervous dogs, dogs
+              triggered by the world a little more or dogs just needing a little
+              more attention.
+            </p>
+            <br />
+            <p>
+              All our dog walks start with a Solo walk, this give us a chance to
+              get to know your dog on a personal level before we can integrate
+              them into a group. Building a bond and a good level of trust with
+              your dog is our priority. This allows for better recall and
+              interactions when out on our walks.
+            </p>
+            <br />
+            <p>
+              These walks are also perfect for reactive dogs, we can tailor you
+              walk to suit your dogs needs. Walking at quieter times and places
+              while your dog still has a satisfying walk.
+            </p>
+            <br />
+            <div class="service-pricing">
+              <p>30 mins - £10</p>
+              <p>60 mins - £18</p>
+              <small> (+£5 for each extra dog in the household) </small>
+            </div>
+          </section>
+          <section class="service-card-2">
+            <img src="images-group-walk" alt="image of group dog walk" />
+            <h3>Group Walks</h3>
+            <br />
+            <p>
+              Our Group walks are currently not running. As our business is new
+              we will be focusing on our Solo walks till we can start to build
+              the group walks.
+            </p>
+            <br />
+            <p>
+              Our Group walks are for the more sociable dogs who like to have a
+              companion. Our groups go up to 4 dogs walked at one time mostly
+              off-lead (subject on dogs recall).
+            </p>
+            <br />
+            <p>
+              Fun, social walks with a small group of friendly dogs. Great for
+              exercise, enrichment, and boosting confidence. Dogs will be chosen
+              for our dog groups on temperament, age, and play-style. All new
+              dogs will be walked on a solo walk basis till the dog walker is
+              comfortable with which group your dog can join.
+            </p>
+            <br />
+            <p>
+              When introducing a new dog into a group or when starting whole new
+              group, secure dog fields will be used at no extra cost. This is so
+              the Dog walker is able to test recall and trust without the risk
+              of a dog getting lost.
+            </p>
+            <br />
+            <div class="service-pricing">
+              <p>60 mins - £18</p>
+            </div>
+          </section>
+          <section class="service-card">
+            <img src="images-dog-sitting" alt="image of dog sitting" />
+            <h3>Puppy Visits & Pop-ins</h3>
+            <br />
+            <p>
+              Our puppy visits provide short walks with playtime, toilet breaks,
+              and basic training support. Perfect for young pups still building
+              stamina.
+            </p>
+            <br />
+            <p>
+              Depending on the age of your puppy we can provide walks if they
+              are fully vaccinated. We also provide in home interaction where we
+              can pop in spend some time with your puppy, allowing for toilet
+              breaks, playtime and basic training.
+            </p>
+            <br />
+            <p>Our puppy visits are adapted to suit you and your puppy</p>
+            <br />
+            <p>
+              Our pop ins include Quick visits for toilet breaks, fuss, and a
+              stretch in the garden. Ideal for dogs that don’t need a full walk.
+            </p>
+            <br />
+            <div class="service-pricing">
+              <p>15 mins - £5</p>
+              <p>30 mins - £10</p>
+            </div>
+          </section>
+        </div>
+      </article>
+      <article id="ourWork"><h2>Our Work</h2></article>
       <article id="contact"><h2>Contact</h2></article>
     </main>
     <footer></footer>
