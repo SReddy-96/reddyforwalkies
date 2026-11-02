@@ -234,12 +234,71 @@
             </div>
           </section>
         </div>
+        <a href="#contact" id="service-button" class="button-primary"
+          >Book a Meet & Greet</a
+        >
       </article>
       <article id="ourWork"><h2>Our Work</h2></article>
-      <article id="contact"><h2>Contact</h2></article>
+      <article id="contact">
+        <h2>Contact Us</h2>
+        <div id="contact-wrapper">
+          <section id="contact-info">
+            <p>
+              For any questions or to book a meet and greet, please contact us
+              using the form or via email.
+            </p>
+            <br />
+            <p>Email: reddyforwalkies@gmail.com</p>
+          </section>
+          <section id="contact-form">
+            <form id="form" method="POST">
+              <legend>Book a Meet & Greet</legend>
+              <input
+                type="hidden"
+                name="access_key"
+                value="b0c196a6-befe-4039-9637-3e467ae5849d"
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Meet & Greet Request from Reddy For Walkies"
+              />
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+              <div class="h-captcha" data-captcha="true"></div>
+              <button type="submit">Send</button>
+              <div id="result"></div>
+            </form>
+          </section>
+        </div>
+      </article>
     </main>
     <footer></footer>
 
+    <!-- form submission reset -->
+    <script>
+      window.onload = function () {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+      };
+    </script>
+    <script src="form.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>

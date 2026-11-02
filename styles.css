@@ -68,6 +68,12 @@ svg {
   max-height: 150px;
 }
 
+br {
+  display: block;
+  content: "";
+  margin: 0.5rem 0;
+}
+
 /* css reset */
 
 :root {
@@ -344,6 +350,7 @@ article {
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
+  gap: 0.5rem;
 }
 
 #about-text > h2 {
@@ -360,18 +367,31 @@ article {
 
 /* services */
 
+#services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+#services > h2 {
+  font-size: 3em;
+  color: var(--text-colour);
+}
+
 #service-grid {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
   padding: 3rem;
   text-align: center;
 }
 
 #service-grid p {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .service-card {
@@ -411,7 +431,52 @@ article {
 }
 
 .service-pricing small {
-  font-size: 0.5em ;
+  font-size: 0.5em;
+}
+
+/* --- */
+
+/* contact */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--secondary-colour);
+}
+
+#contact > h2 {
+  font-size: 3em;
+  color: var(--text-colour);
+}
+
+#contact-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 3rem;
+  gap: 3rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--cream);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* --- */
