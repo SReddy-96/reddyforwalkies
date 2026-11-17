@@ -34,7 +34,7 @@
     <title>Dog Walking in Cannock, Staffordshire | Reddy For Walkies</title>
     <meta
       name="description"
-      content="Friendly, insured dog walking in Cannock, Hednesford, Heath Hayes and Cannock Chase. Solo and group walks. Get in touch today."
+      content="Trusted, insured dog walking in Cannock, Hednesford, Heath Hayes and Cannock Chase. Solo and group walks. Get in touch today."
     />
     <link rel="canonical" href="https://reddyforwalkies.co.uk/" />
     <meta
@@ -43,7 +43,7 @@
     />
     <meta
       property="og:description"
-      content="Friendly, insured dog walking across Cannock and Cannock Chase."
+      content="Trusted, insured dog walking across Cannock and Cannock Chase."
     />
     <meta
       property="og:image"
@@ -64,7 +64,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="brand" href="#landing"
+      <a class="brand" href="#hero"
         ><img
           src="favicon_io/favicon-32x32.png"
           alt="Reddy For Walkies Logo"
@@ -73,29 +73,37 @@
 
       <nav id="site-nav" aria-label="Main">
         <ul>
-          <li><a href="#landing">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#ourWork">Our Work</a></li>
-          <li><a href="#contact" class="button-secondary contact">Contact us</a></li>
+          <li>
+            <a href="#contact" class="button-secondary contact">Contact us</a>
+          </li>
         </ul>
       </nav>
     </header>
     <div class="overlay"></div>
 
     <main>
-      <article id="hero">
-        <img
-          src="images/Reddy for Walkies logo final.webp"
-          alt="reddy for walkies logo"
-          id="hero-image"
-        />
-        <article id="hero-text">
-          <h1>Professional Dog Walking Experts</h1>
-          <p class="hero-sub">Trusted, insured dog walking in Cannock</p>
-          <a class="button-secondary" href="#contact">Get in Touch</a>
+      <div id="hero-wrapper">
+        <article id="hero">
+          <img
+            src="images/Reddy for Walkies logo final.webp"
+            alt="reddy for walkies logo"
+            id="hero-image"
+          />
+          <article id="hero-text">
+            <h1>Professional Dog Walking Experts</h1>
+            <p class="hero-sub">Trusted, insured dog walking in Cannock</p>
+            <a class="button-hero" href="#contact">Get in Touch ➔</a>
+          </article>
         </article>
-      </article>
+        <div id="hero-paws">
+          <img src="images/hero-paws.webp" alt="paw print" />
+        </div>
+      </div>
+
       <article id="about">
         <section id="about-card">
           <img src="images/about.png" alt="about reddy for walkies" />
@@ -501,7 +509,7 @@
                 value="New Meet & Greet Request from Reddy For Walkies"
               />
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" required autocomplete />
+              <input type="text" id="name" name="name" required autocomplete="autocomplete" />
               <label for="email">Email</label>
               <input
                 type="email"
@@ -509,7 +517,7 @@
                 name="email"
                 size="30"
                 required
-                autocomplete
+                autocomplete="autocomplete"
               />
               <label for="message">Message</label>
               <textarea
