@@ -51,6 +51,12 @@
     />
     <meta property="og:url" content="https://reddyforwalkies.co.uk/" />
     <meta property="og:type" content="website" />
+
+    <link
+      rel="preload"
+      as="image"
+      href="images/Reddy for Walkies logo final.webp"
+    />
   </head>
   <body>
     <header>
@@ -92,6 +98,8 @@
             src="images/Reddy for Walkies logo final.webp"
             alt="reddy for walkies logo"
             id="hero-image"
+            loading="eager"
+            fetchpriority="high"
           />
           <article id="hero-text">
             <h1>Professional Dog Walking Experts</h1>
@@ -99,13 +107,10 @@
             <a class="button-hero" href="#contact">Get in Touch ➔</a>
           </article>
         </article>
-        <div id="hero-paws">
-          <img src="images/hero-paws.webp" alt="paw print" />
-        </div>
       </div>
 
-      <article id="about">
-        <section id="about-card">
+      <section id="about" aria-label="About us">
+        <article id="about-card">
           <img src="images/about.png" alt="about reddy for walkies" />
           <div>
             <h2>Hi. I'm Emily</h2>
@@ -147,8 +152,8 @@
               />
             </svg>
           </div>
-        </section>
-        <section id="about-text">
+        </article>
+        <article id="about-text">
           <h2>About Us</h2>
           <p>
             Hi, I’m Emily, the proud owner and professional dog walker behind
@@ -178,8 +183,8 @@
             <a href="#ourWork" class="button-primary">Our Work</a>
             <a href="#services" class="button-primary">View Services</a>
           </div>
-        </section>
-      </article>
+        </article>
+      </section>
       <section id="qualifications" aria-label="Our qualifications">
         <div class="qual-card">
           <div class="qual-icon" aria-hidden="true">
@@ -264,10 +269,10 @@
           </p>
         </div>
       </section>
-      <article id="services">
+      <section id="services" aria-label="Services">
         <h2>Services</h2>
         <div id="service-grid">
-          <section class="service-card">
+          <article class="service-card">
             <img
               src="images/services/martin-dalsgaard-sGV1QDMM0Gg-unsplash.jpg"
               alt="woman in black jacket walking with black labrador retriever on pathway during daytime"
@@ -293,11 +298,11 @@
                 <small> (+£5 for each extra dog in the household) </small>
               </div>
             </div>
-          </section>
-          <section class="service-card-2">
+          </article>
+          <article class="service-card-2">
             <img
-              src="images/services/bruce-warrington-WSAOGHKEqFc-unsplash.jpg"
-              alt="image of group dog walk"
+              src="images/services/PXL_20251014_104848119.webp"
+              alt="image of group of dogs walking through the forest"
               loading="lazy"
             />
             <div class="service-content">
@@ -318,11 +323,11 @@
                 <p>60 mins - £18</p>
               </div>
             </div>
-          </section>
-          <section class="service-card">
+          </article>
+          <article class="service-card">
             <img
               src="images/services/jexo-n9tLDIhFvXY-unsplash.jpg"
-              alt="image of dog sitting on armchair"
+              alt="image of jack russell sitting on armchair"
               loading="lazy"
             />
             <div class="service-content">
@@ -344,13 +349,13 @@
                 <p>30 mins - £10</p>
               </div>
             </div>
-          </section>
+          </article>
         </div>
         <a href="#contact" id="service-button" class="button-primary"
           >Book a Meet & Greet</a
         >
-      </article>
-      <article id="ourWork">
+      </section>
+      <section id="ourWork" aria-label="Our Work">
         <h2>Our Work</h2>
         <div id="ourWorkWrapper">
           <article class="workCard">
@@ -369,66 +374,76 @@
           </article>
           <article class="workCard">
             <img
-              src="images/our-work/1.webp"
+              src="images/our-work/2.webp"
               alt="dog out on a walk"
               loading="lazy"
             />
             <div class="work-text">
-              <p class="work-review">
-                "Reddy For Walkies was perfect for Snifter. They met all his
-                needs and provided excellent care."
-              </p>
-              <p class="work-name">Steven, owner of Snifter</p>
+              <p class="work-review">"FILLER"</p>
+              <p class="work-name">, owner of</p>
             </div>
           </article>
           <article class="workCard">
             <img
-              src="images/our-work/1.webp"
+              src="images/our-work/3.webp"
               alt="dog out on a walk"
               loading="lazy"
             />
             <div class="work-text">
-              <p class="work-review">
-                "Reddy For Walkies was perfect for Snifter. They met all his
-                needs and provided excellent care."
-              </p>
-              <p class="work-name">Steven, owner of Snifter</p>
+              <p class="work-review">"FILLER"</p>
+              <p class="work-name">, owner of</p>
             </div>
           </article>
           <article class="workCard">
             <img
-              src="images/our-work/1.webp"
+              src="images/our-work/4.webp"
               alt="dog out on a walk"
               loading="lazy"
             />
             <div class="work-text">
-              <p class="work-review">
-                "Reddy For Walkies was perfect for Snifter. They met all his
-                needs and provided excellent care."
-              </p>
-              <p class="work-name">Steven, owner of Snifter</p>
+              <p class="work-review">"FILLER"</p>
+              <p class="work-name">, owner of</p>
             </div>
           </article>
           <article class="workCard">
             <img
-              src="images/our-work/1.webp"
+              src="images/our-work/5.webp"
               alt="dog out on a walk"
               loading="lazy"
             />
             <div class="work-text">
-              <p class="work-review">
-                "Reddy For Walkies was perfect for Snifter. They met all his
-                needs and provided excellent care."
-              </p>
-              <p class="work-name">Steven, owner of Snifter</p>
+              <p class="work-review">"FILLER"</p>
+              <p class="work-name">, owner of</p>
+            </div>
+          </article>
+          <article class="workCard">
+            <img
+              src="images/our-work/6.webp"
+              alt="dog out on a walk"
+              loading="lazy"
+            />
+            <div class="work-text">
+              <p class="work-review">"FILLER"</p>
+              <p class="work-name">, owner of</p>
+            </div>
+          </article>
+          <article class="workCard">
+            <img
+              src="images/our-work/7.webp"
+              alt="dog out on a walk"
+              loading="lazy"
+            />
+            <div class="work-text">
+              <p class="work-review">"FILLER"</p>
+              <p class="work-name">, owner of</p>
             </div>
           </article>
         </div>
-      </article>
-      <article id="contact">
+      </section>
+      <section id="contact" aria-label="Contact">
         <h2>Contact Us</h2>
         <div id="contact-wrapper">
-          <section id="contact-info">
+          <article id="contact-info">
             <p class="contact-eyebrow">GET IN TOUCH</p>
             <h3>A happier walk starts with a hello.</h3>
             <p class="contact-intro">
@@ -487,8 +502,8 @@
               Not sure which service is right? Share your dog’s age,
               personality, and routine in the message.
             </p>
-          </section>
-          <section id="contact-form">
+          </article>
+          <article id="contact-form">
             <form id="form" method="POST">
               <p class="contact-eyebrow">SEND A MESSAGE</p>
               <h3>Book a Meet & Greet</h3>
@@ -509,7 +524,13 @@
                 value="New Meet & Greet Request from Reddy For Walkies"
               />
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" required autocomplete="autocomplete" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+              />
               <label for="email">Email</label>
               <input
                 type="email"
@@ -517,7 +538,7 @@
                 name="email"
                 size="30"
                 required
-                autocomplete="autocomplete"
+                autocomplete="email"
               />
               <label for="message">Message</label>
               <textarea
@@ -539,9 +560,9 @@
               <button class="button-primary" type="submit">Send</button>
               <div id="result"></div>
             </form>
-          </section>
+          </article>
         </div>
-      </article>
+      </section>
     </main>
     <footer>
       <p>

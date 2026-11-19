@@ -288,7 +288,7 @@ nav > ul > li > a.contact {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 #hero {
@@ -301,7 +301,7 @@ nav > ul > li > a.contact {
 
 #hero-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
   justify-self: right;
 }
@@ -319,17 +319,6 @@ nav > ul > li > a.contact {
   color: var(--text);
 }
 
-#hero-paws {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#hero-paws > img {
-  width: 100%;
-  height: auto;
-}
-
 @media (max-width: 800px) {
   #hero {
     grid-template-columns: 1fr;
@@ -340,9 +329,6 @@ nav > ul > li > a.contact {
   #hero-image {
     max-width: 350px;
     justify-self: center;
-  }
-  #hero-paws {
-    margin-top: 0;
   }
 }
 
