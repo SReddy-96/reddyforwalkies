@@ -96,6 +96,60 @@ body {
   color: var(--text);
 }
 
+/* announcement */
+
+.announcement {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 2.75rem;
+  padding: 0.5rem 3.25rem 0.5rem 0.75rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.4;
+  background: var(--off-white);
+  color: var(--text);
+  text-align: center;
+}
+
+.announcement p {
+  width: 100%;
+  max-width: 60ch;
+  margin: 0;
+  line-height: inherit;
+}
+
+.announcement button {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.announcement[hidden] {
+  display: none;
+}
+
+@media (max-width: 30rem) {
+  .announcement {
+    font-size: 0.95rem;
+  }
+
+  .announcement p {
+    max-width: 18rem;
+  }
+}
+
+/* --- */
 /* ---------- Header (mobile first) ---------- */
 header {
   position: sticky;
@@ -405,7 +459,7 @@ nav > ul > li > a.contact {
 }
 
 #about-card {
-  height: 100%;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -419,10 +473,19 @@ nav > ul > li > a.contact {
 
 .about-icons {
   display: flex;
-  width: 150px;
-  height: 150px;
+  width: fit-content;
+  height: fit-content;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.social-icons {
+  transition: transform 0.2s ease;
+}
+
+.social-icons:hover {
+  color: var(--text-colour);
+  transform: translateY(-3px);
 }
 
 #about-text {
@@ -577,8 +640,8 @@ nav > ul > li > a.contact {
   line-height: 1.2;
 }
 
-.service-card > img,
-.service-card-2 > img {
+.service-card img,
+.service-card-2 img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
@@ -619,6 +682,28 @@ nav > ul > li > a.contact {
 
 .service-pricing small {
   font-size: 0.5em;
+}
+
+.img-container {
+  position: relative;
+  text-align: center;
+}
+
+.comingSoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  padding: 0.5rem 2rem;
+  background: var(--cream);
+  color: var(--text-colour);
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 1;
+  border: var(--text-colour) 1px solid;
+  border-radius: 1rem;
+  font-size: x-large;
+  box-shadow: 0 4px 12px rgba(29, 26, 20, 0.12);
 }
 
 /* --- */
